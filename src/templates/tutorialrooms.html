@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'js/mapscript.js' %}"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/demostyles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<!--<h1> {{template_title}} </h1>-->
+<!--{{users}}-->
+<!--{{request.user}} #haven't set yet-->
+
+<style>
+    .btn-lg {
+    border-radius:0;
+    }
+</style>
+
+<h1>Main Library</h1>
+<h4>-Study Room 3-</h4>
+
+<div class="container" id="mapholder">
+<div class="swiper-container" id="box">
+                        <div class="swiper-wrapper" id="innerContent">
+                            <!--<div class="swiper-slide">Slide 1</div>-->
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+{% endblock %}
+
+{% block js %}
+    <!-- Swiper JS -->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+</div>
+<hr>
+
+<style>
+     .btn-xs {
+                        width: 70px;
+                        height: 60px;
+                        border-radius:0;
+                    }
+    .btn-group > .btn:first-child {
+                        margin-left: -1px;
+                    }
+</style>
+
+<h4>OPTIONS <a><span class="caret"></span></a></h4>
+
+                        <div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary btn-xs" style="vertical-align: middle;">
+    <input type="checkbox" autocomplete="off">King's <br>Building
+  </label>
+
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off">Central
+  </label>
+
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off">Lauriston
+  </label>
+
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off">Holyrood
+  </label>
+
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off">Other
+  </label>
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-microphone-slash fa-2x"></i>
+  </label><label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-map-marker fa-2x"></i>
+  </label>
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-laptop fa-2x"></i>
+  </label><label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-print fa-2x"></i>
+  </label><label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-square-o fa-2x"></i>
+  </label><label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-microphone-slash fa-2x"></i>
+  </label>
+                            <label class="btn btn-primary btn-xs">
+    <input type="checkbox" autocomplete="off"> <i class="fa fa-video-camera fa-2x"></i>
+  </label>
+</div>
+
+{% endblock %}
+<!--if not inside block, it will not show up-->
+<!--block.super-->
+<!--tut 20/42-->

@@ -6,3 +6,7 @@ body {
 .navbar {
   margin-bottom: 20px;
 }
+
+.navbar navbar-header a {
+ line-height: 50px;
+}

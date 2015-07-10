@@ -1,25 +1,26 @@
 {% extends "base.html" %}
+{% block content %}
+<!--<h1> {{template_title}} </h1>-->
+<!--{{users}}-->
+<!--{{request.user}} #haven't set yet-->
 
-{% block jumbotron %}
-<!-- Main component for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <h1>Navbar example</h1>
-    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p>
-      <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-    </p>
-  </div>
+<style>
+    .btn-lg {
+    border-radius:0;
+    }
+</style>
+
+<label class="btn btn-primary btn-lg btn-block">
+<i class="fa fa-laptop fa-3x"></i>
+<br>Computer Labs</label>
+<label class="btn btn-success btn-lg btn-block">
+<i class="fa fa-home fa-3x"></i>
+<br>Tutorial Rooms</label><label class="btn btn-info btn-lg btn-block">
+<i class="fa fa-star fa-3x"></i>
+<br>Favourites</label><label class="btn btn-warning btn-lg btn-block">
+<i class="fa fa-history fa-3x"></i>
+<br>History</label>
 {% endblock %}
-
- {% block content %}
-<h1> {{template_title}} </h1>
-
-{{users}}
-
-{{request.user}} #haven't set yet
- {% endblock %}
-
-
-  <!--if not inside block, it will not show up-->
+<!--if not inside block, it will not show up-->
 <!--block.super-->
 <!--tut 20/42-->

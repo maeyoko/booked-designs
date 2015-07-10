@@ -7,4 +7,4 @@ def home(request):
         title = "My Title: %s" %(request.user)
     context = {"template_title": title,
     }
-    return render(request, "home.html", context)
+    return render(request, "tutorialrooms.html", context)
