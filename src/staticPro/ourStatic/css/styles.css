@@ -11,6 +11,7 @@ body * {
     font-family: existence;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: large;
 }
 
 /*make margin smaller*/
