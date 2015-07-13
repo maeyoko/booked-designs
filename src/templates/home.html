@@ -10,16 +10,18 @@
     }
 </style>
 
+
+
 <label class="btn btn-primary btn-lg btn-block">
 <i class="fa fa-laptop fa-3x"></i>
-<br>Computer Labs</label>
+<br><a href="{% url 'computerlabs' %}">Computer Labs</a></label>
 <label class="btn btn-success btn-lg btn-block">
 <i class="fa fa-home fa-3x"></i>
-<br>Tutorial Rooms</label><label class="btn btn-info btn-lg btn-block">
+<br><a href="{% url 'tutorialrooms' %}">Tutorial Rooms</a></label><label class="btn btn-info btn-lg btn-block">
 <i class="fa fa-star fa-3x"></i>
-<br>Favourites</label><label class="btn btn-warning btn-lg btn-block">
+<br><a href="{% url 'favourites' %}">Favourites</a></label><label class="btn btn-warning btn-lg btn-block">
 <i class="fa fa-history fa-3x"></i>
-<br>History</label>
+<br><a href="{% url 'history' %}">History</a></label>
 {% endblock %}
 <!--if not inside block, it will not show up-->
 <!--block.super-->

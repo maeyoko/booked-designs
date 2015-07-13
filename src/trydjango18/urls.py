@@ -21,6 +21,11 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', "newsletter.views.home", name="home"),
+    url(r'^$', "newsletter.views.home", name="home"),
+    url(r'^computerlabs$', 'newsletter.views.computerlabs', name="computerlabs"),
+    url(r'^tutorialrooms$', 'newsletter.views.tutorialrooms', name="tutorialrooms"),
+    url(r'^favourites$', 'newsletter.views.favourites', name="favourites"),
+    url(r'^history$', 'newsletter.views.history', name="history"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

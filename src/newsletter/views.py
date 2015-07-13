@@ -7,4 +7,16 @@ def home(request):
         title = "My Title: %s" %(request.user)
     context = {"template_title": title,
     }
-    return render(request, "favourites.html", context)
+    return render(request, "home.html", context)
+
+def computerlabs(request):
+    return render(request, "computerlabs.html")
+
+def tutorialrooms(request):
+    return render(request, "tutorialrooms.html")
+
+def favourites(request):
+    return render(request, "favourites.html")
+
+def history(request):
+    return render(request, "history.html")
