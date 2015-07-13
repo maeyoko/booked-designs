@@ -1,8 +1,10 @@
+/*apply font to whole hmtl*/
 body * {
     font-family: existence;
     text-transform: uppercase;
 }
 
+/*make margin smaller*/
 h1 {
     margin-top: 0px;
 }
@@ -21,6 +23,10 @@ h1 {
    position: absolute;
 }
 
+/*rm amcharts logo*/
+#chartdiv a{
+   font-size: 0 !important;
+}
 
 /* --------------------------------------------------------------- LEFT SIDE -----
 
