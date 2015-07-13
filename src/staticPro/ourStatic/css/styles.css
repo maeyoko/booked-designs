@@ -1,4 +1,9 @@
 /*apply font to whole hmtl*/
+@font-face {
+    font-family: existence;
+    src: url('Existence-Light.ttf');
+}
+
 body * {
     font-family: existence;
     text-transform: uppercase;
