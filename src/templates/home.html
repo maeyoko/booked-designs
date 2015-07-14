@@ -1,8 +1,5 @@
 {% extends "base2.html" %}
 {% block content %}
-<!--<h1> {{template_title}} </h1>-->
-<!--{{users}}-->
-<!--{{request.user}} #haven't set yet-->
 
 <style>
     .btn-lg {
@@ -10,13 +7,9 @@
     }
 </style>
 
-
 <a href="{% url 'computerlabs' %}" class="btn btn-info btn-lg btn-block" role="button"><i class="fa fa-laptop fa-3x"></i><br>Computer Labs</a>
 <a href="{% url 'tutorialrooms' %}" class="btn btn-success btn-lg btn-block" role="button"><i class="fa fa-home fa-3x"></i><br>Tutorial Rooms</a>
 <a href="{% url 'favourites' %}" class="btn btn-warning btn-lg btn-block" role="button"><i class="fa fa-star fa-3x"></i><br>Favourites</a>
 <a href="{% url 'history' %}" class="btn btn-primary btn-lg btn-block" role="button"><i class="fa fa-history fa-3x"></i><br>History</a>
 
 {% endblock %}
-<!--if not inside block, it will not show up-->
-<!--block.super-->
-<!--tut 20/42-->

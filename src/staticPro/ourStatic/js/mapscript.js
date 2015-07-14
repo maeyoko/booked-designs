@@ -47,4 +47,3 @@ function showError(error) {
         break;
     }
 }
-

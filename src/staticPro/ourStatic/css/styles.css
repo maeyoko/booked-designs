@@ -1,15 +1,6 @@
-/*apply custom font to whole hmtl
-Web fonts allow Web designers to use fonts that
-are not installed on the user's computer.*/
-@font-face {
-    font-family: existence;
-    src: url('Existence-Light.ttf');
-}
-
 body * {
-    font-family: existence;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: capital;
     font-size: large;
 }
 

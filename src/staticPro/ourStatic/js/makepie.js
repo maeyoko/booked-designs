@@ -1,3 +1,5 @@
+function makepie(free, inuse) {
+
 AmCharts.makeChart("chartdiv",
 {
 	"type": "pie",
@@ -7,7 +9,7 @@ AmCharts.makeChart("chartdiv",
 	"labelText": "",
 	"minRadius": 25,
 	"radius": 25,
-	"startAngle": 180,
+	"startAngle": 0,
 	"baseColor": "#009ED3",
 	"labelsEnabled": false,
 	"marginBottom": 0,
@@ -17,8 +19,8 @@ AmCharts.makeChart("chartdiv",
 	"pullOutDuration": 0,
 	"sequencedAnimation": false,
 	"startDuration": 0,
-	"titleField": "country",
-	"valueField": "litres",
+	"titleField": "Type",
+	"valueField": "Number",
 	"fontSize": 12,
 	"panEventsEnabled": false,
 	"theme": "default",
@@ -27,13 +29,16 @@ AmCharts.makeChart("chartdiv",
 	"titles": [],
 	"dataProvider": [
 		{
-			"country": "Czech Republic",
-			"litres": "75"
+			"Type": "Free",
+			"Number": free
 		},
 		{
-			"country": "Belgium",
-			"litres": "25"
+			"Type": "In-Use",
+			"Number": inuse
 		}
 	]
 }
 );
+}
+
+makepie("50","90")
