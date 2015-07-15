@@ -10,17 +10,6 @@ body * {
     margin-right: 20px;
 }
 
-/* maps */
-#box {
-   width: 100%;
-   padding-bottom: 100%;
-
-}
-#innerContent {
-   position: absolute;
-}
-/* end maps */
-
 /*remove amcharts logo*/
 #chartdiv a{
    font-size: 0 !important;
