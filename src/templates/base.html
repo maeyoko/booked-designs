@@ -11,7 +11,7 @@
             .navbar {
             background: none;
             border-color: #FFF;
-            margin-bottom: 0;
+            margin-bottom: -5px;
             border: none;
             }
             .navbar-brand {
@@ -39,9 +39,7 @@
             border-radius: 1px;
             background-color: #d4d4d4
             }
-            .navbar-nav {
-            margin-top: 11px;
-            }
+
         </style>
 
         {% include 'navbar.html' %}
@@ -54,6 +52,8 @@
             {% endblock %}
         </div>
 
+        {% block outside %}
+        {% endblock %}
         <!--grey divider line-->
         <hr>
 

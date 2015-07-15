@@ -40,15 +40,12 @@
     <script src="{% static 'js/swiper.js' %}"></script>
 </div>
 <hr>
+{% endblock %}
 
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar2">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-
-  <div id="navbar2" class="navbar-collapse collapse">
+{% block outside %}
+<div class="row">
+    <div class="col-xs-10">
+      <div id="navbar2" class="navbar-collapse collapse">
     <p>Attributes <a><span class="caret"></span></a></p>
 <div class="btn-group" data-toggle="buttons">
     <label class="btn btn-primary btn-xs">
@@ -82,5 +79,16 @@
     </label>
 </div>
   </div><!--/.nav-collapse -->
+    </div>
 
+    <div class="col-xs-2">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+</div>
+
+</div>
 {% endblock %}
