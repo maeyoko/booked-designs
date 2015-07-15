@@ -41,4 +41,5 @@ AmCharts.makeChart("chartdiv",
 );
 }
 
+//make a pie chart
 makepie("50","90")

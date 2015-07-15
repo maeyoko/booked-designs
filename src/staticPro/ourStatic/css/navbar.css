@@ -1,12 +1,22 @@
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
 }
 
 .navbar {
-  margin-bottom: 20px;
+background: none;
+border-color: #FFF;
+margin-bottom: 0;
+border: none;
 }
-
-.navbar navbar-header a {
- line-height: 50px;
+.navbar-brand {
+padding: 0;
+}
+.navbar-nav > li > a {
+padding-top: 8px;
+padding-bottom: 8px;
+}
+.navbar-toggle {
+background-color: #000;
+margin-top: 9px;
+margin-bottom: 0;
 }
