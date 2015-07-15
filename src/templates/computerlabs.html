@@ -24,7 +24,32 @@
     }
 </style>
 
-<h4>OPTIONS <a><span class="caret"></span></a></h4>
+<p>Appleton Tower</p>
+<p>-Central Campus-</p>
+<div class="container" id="mapholder">
+    <div class="swiper-container" id="box">
+        <div class="swiper-wrapper" id="innerContent">
+            <!--<div class="swiper-slide">Slide 1</div>-->
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+</div>
+<hr>
+
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+  <div id="navbar2" class="navbar-collapse collapse">
+    <p>Attributes <a><span class="caret"></span></a></p>
 <div class="btn-group" data-toggle="buttons">
     <label class="btn btn-primary btn-xs">
     <input type="checkbox" autocomplete="off"> <i class="fa fa-microphone-slash fa-2x"></i>
@@ -36,6 +61,9 @@
     <br>
 </div>
 
+<br> <br>
+
+<p>Campuses <a><span class="caret"></span></a></p>
 <div class="btn-group" data-toggle="buttons">
     <label class="btn btn-primary btn-xs" >
     <input type="checkbox" autocomplete="off">King's <br>Building
@@ -53,22 +81,6 @@
     <input type="checkbox" autocomplete="off">Other
     </label>
 </div>
-
-<h1>Appleton Tower</h1>
-<h4>-Central Campus-</h4>
-<div class="container" id="mapholder">
-    <div class="swiper-container" id="box">
-        <div class="swiper-wrapper" id="innerContent">
-            <!--<div class="swiper-slide">Slide 1</div>-->
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    <!-- Swiper JS -->
-    <script src="{% static 'js/swiper.min.js' %}"></script>
-    <script src="{% static 'js/swiper.js' %}"></script>
-</div>
-<hr>
+  </div><!--/.nav-collapse -->
 
 {% endblock %}
