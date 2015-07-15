@@ -36,18 +36,21 @@
         padding-right: 2px;
     }
     #free {
-        background: #009ED3;
+        background: #00CDFF;
         height: 10px;
         width: 10px;
         display: inline-block;
         border-radius: 25px;
     }
     #inuse {
-        background: #00CDFF;
+        background: #009ED3;
         height: 10px;
         width: 10px;
         display: inline-block;
         border-radius: 25px;
+    }
+    #mapbtn {
+        margin-top: 5px;
     }
 
 </style>
@@ -75,10 +78,10 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-4"><div id="free"></div> Free:<br><div id="inuse"></div> In-Use:</div>
-                            <div class="col-xs-1">25<br>75</div>
+                            <div class="col-xs-1">75<br>25</div>
                             <div class="col-xs-4"><div id="chartdiv" style="width: 100%; height: 50px; background-color: #FFFFFF;" ></div></div>
 
-                            <div class="col-xs-2"> <a href="{% url 'computerlabs' %}" class="btn btn-default" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
+                            <div class="col-xs-2"> <a href="{% url 'computerlabs' %}" class="btn btn-default" id="mapbtn" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
                             </div>
 
                         </div>
