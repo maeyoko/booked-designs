@@ -8,9 +8,7 @@ var destinationLatitudes = [55.94444169174422, 55.94854169184422, 55.94644169174
 var destinationLongitudes = [-3.1870651245117188, -3.1870651245117388, -3.1810651245117188, -3.1890651245117388, -3.1872651245117388, -3.1870951245117388];
 var noOfLocations = destinationLatitudes.length;
 
-var swiper;
-
-// functions to do with getting user location
+var swiper; //initialize swiper
 
 $(document).ready(function() {
 
@@ -25,8 +23,7 @@ $(document).ready(function() {
         spaceBetween: 30,
     });
 
-//appending slides
-
+    //appending slides
     $('.swiper-button-next').click(function(e){
         e.preventDefault();
         console.log(appendNumber);
@@ -36,8 +33,8 @@ $(document).ready(function() {
         sizeMap();
     });
 
-    getLocation();
-    $(window).resize(sizeMap);
+    getLocation(); //get user location
+    $(window).resize(sizeMap); //responsiveness
 });
 
 function getLocation() {
