@@ -29,12 +29,12 @@ AmCharts.makeChart("chartdiv",
 	"titles": [],
 	"dataProvider": [
 		{
-			"Type": "Free",
-			"Number": free
-		},
-		{
 			"Type": "In-Use",
 			"Number": inuse
+		},
+		{
+			"Type": "Free",
+			"Number": free
 		}
 	]
 }
@@ -42,4 +42,4 @@ AmCharts.makeChart("chartdiv",
 }
 
 //make a pie chart
-makepie("50","90")
+makepie("75","25")
