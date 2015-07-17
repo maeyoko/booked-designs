@@ -10,7 +10,7 @@ AmCharts.makeChart("chartdiv",
 	"minRadius": 25,
 	"radius": 25,
 	"startAngle": 90,
-	"baseColor": "#337AB7",
+	"baseColor": "#337AB7", //brand-primary
 	"labelsEnabled": false,
 	"marginBottom": 0,
 	"marginTop": 0,
@@ -42,4 +42,4 @@ AmCharts.makeChart("chartdiv",
 }
 
 //make a pie chart
-makepie("75","25")
+makepie("75","25");

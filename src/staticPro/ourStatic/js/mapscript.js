@@ -35,15 +35,6 @@ $(document).ready(function() {
 
     getLocation(); //get user location
     $(window).resize(sizeMap); //responsiveness
-
-    //for plus/minus toggle
-    $('a[href="#collapse-personal-info"]').on("click", function (e) {
-        if ( !$('#collapse-personal-info').hasClass('in') ) {
-            $('#collapse-personal-info').siblings('.panel-heading').find('i').removeClass('fa-plus').addClass('fa-minus');
-        } else {
-            $('#collapse-personal-info').siblings('.panel-heading').find('i').removeClass('fa-minus').addClass('fa-plus');
-        }
-    });
 });
 
 function getLocation() {
@@ -57,6 +48,7 @@ function getLocation() {
     }
 }
 
+//to make map square
 function sizeMap()
 {
     $("iframe").height($("iframe").width());

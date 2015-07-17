@@ -1,29 +1,45 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
 {% block header %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{% static 'js/swiper.min.js' %}"></script>
 <script src="{% static 'js/mapscript.js' %}"></script>
+
 <!-- Link Swiper's CSS -->
 <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/demostyles.css' %}">
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-{% endblock %}
 
-{% block content %}
 <style>
+    .modal-body {
+    padding-top: 0px;
+    }
+    .btn-primary:hover {
+    background-color: #337AB7;
+    }
     .btn-xs {
     width: 70px;
-    height: 60px;
+    height: 50px;
     border-radius:0;
     }
     .btn-group > .btn:first-child {
     margin-left: -1px;
     }
+    .btn {
+    margin: 5px 0 5px 0;
+    }
+
 </style>
-<h1>Main Library</h1>
-<h4>-Study Room 3-</h4>
-<div class="container" id="mapholder">
+
+{% endblock %}
+{% block content %}
+
+{% endblock %}
+
+{% block outside %}
+<div class="container"> <p>Appleton Tower<br>-Central Campus-</p>
+
+<div class="container">
     <div class="swiper-container" id="box">
         <div class="swiper-wrapper" id="innerContent">
             <!--<div class="swiper-slide">Slide 1</div>-->
@@ -32,46 +48,12 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-
-    <!-- Swiper JS -->
-    <script src="{% static 'js/swiper.min.js' %}"></script>
-    <script src="{% static 'js/swiper.js' %}"></script>
-</div>
-<hr>
-
-<h4>OPTIONS <a><span class="caret"></span></a></h4>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-map-marker fa-2x"></i>
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-laptop fa-2x"></i>
-    </label><label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-print fa-2x"></i>
-    </label><label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-square-o fa-2x"></i>
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-video-camera fa-2x"></i>
-    </label>
 </div>
 
-<h4>CAMPUSES <a><span class="caret"></span></a></h4>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-xs" style="vertical-align: middle;">
-    <input type="checkbox" autocomplete="off">King's <br>Building
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Central
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Lauriston
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Holyrood
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Other
-    </label>
+<button type="button" class="btn btn-default"> <i class="fa fa-star"></i> Add to favourites</button>
+
 </div>
+
+{% include "modal-tutorials.html" %}
+
 {% endblock %}

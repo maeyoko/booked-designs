@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block header %}
+
 <!-- amCharts javascript sources -->
 <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
 <script type="text/javascript" src="http://www.amcharts.com/lib/3/pie.js"></script>
@@ -15,13 +16,6 @@
     .nav {
     margin-bottom: 6px;
     }
-    <!--.col-xs-3:not(:first-child) {-->
-    <!--padding-left:2px;-->
-    <!--}-->
-    <!--.col-xs-3:not(:last-child) {-->
-    <!--padding-right: 2px;-->
-    <!--}-->
-
     .map-btn {
     margin-top: 5px;
     float: right;
@@ -30,12 +24,34 @@
     float: right;
     font-size: 14px;
     }
+    .panel-default > .panel-heading .badge {
+    background-color: #337AB7; /*brand-primary*/
+    }
     .avail {
     float: right;
     width: 12px;
     }
+    .fa-map-marker, .fa-calendar {
+    color: #555; /*grey-light*/
+    }
+    .fa-check {
+    margin-left: -1px;
+    }
+    .panel-default > .panel-heading .badge.check {
+    background-color: #5cb85c;
+    }
+    .panel-default > .panel-heading .badge.minus {
+    background-color: #777;
+    }
+    .panel-default > .panel-heading .badge.times {
+    background-color: #d9534f;
+    }
+    .booknow {
+    margin-left: -15px;
+    }
 
 </style>
+
 <ul class="nav nav-pills">
     <!--Computers-->
     <li class="active"><a data-toggle="tab" href="#home">Computers</a></li>
@@ -73,22 +89,19 @@
                 <div class="panel-heading" data-toggle="collapse" data-target="#collapseTwo">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        <span class="badge">75</span> Library Cafe <span class="caret"></span>
+                        <span class="badge">18</span> Appleton <span class="caret"></span>
                         </a>
                     </h4>
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-xs-4">
-                                <div class="free"></div>
-                                Free:<br>
-                                <div class="inuse"></div>
-                                In-Use:
+                            <div class="col-xs-6">
+                                <span>Free:<span class="badge free">18</span><br></span>
+                                In-Use: <span class="badge inuse">20</span>
                             </div>
-                            <div class="col-xs-1">75<br>25</div>
                             <div class="col-xs-4">
-                                <div id="chartdiv2" style="width: 100%; height: 50px; background-color: #FFFFFF;" ></div>
+                                <div id="chartdiv2" style="width: 50px; height: 50px; background-color: #FFFFFF;" ></div>
                             </div>
                             <div class="col-xs-2"> <a href="{% url 'computerlabs' %}" class="btn btn-default map-btn" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
                             </div>
@@ -100,22 +113,19 @@
                 <div class="panel-heading" data-toggle="collapse" data-target="#collapseThree">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-target="#collapseThree" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                        <span class="badge">2</span> Library Cafe <span class="caret"></span>
+                        <span class="badge">2</span> Hugh Robson <span class="caret"></span>
                         </a>
                     </h4>
                 </div>
                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-xs-4">
-                                <div class="free"></div>
-                                Free:<br>
-                                <div class="inuse"></div>
-                                In-Use:
+                            <div class="col-xs-6">
+                                <span>Free:<span class="badge free">2</span><br></span>
+                                In-Use: <span class="badge inuse">15</span>
                             </div>
-                            <div class="col-xs-1">75<br>25</div>
                             <div class="col-xs-4">
-                                <div id="chartdiv3" style="width: 100%; height: 50px; background-color: #FFFFFF;" ></div>
+                                <div id="chartdiv3" style="width: 50px; height: 50px; background-color: #FFFFFF;" ></div>
                             </div>
                             <div class="col-xs-2"> <a href="{% url 'computerlabs' %}" class="btn btn-default map-btn" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
                             </div>
@@ -133,7 +143,7 @@
                 <div class="panel-heading" data-toggle="collapse" data-target="#collapseFour">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-target="#collapseFour" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                        <span class="badge"><i class="fa fa-check avail"></i></span>Library Cafe <span class="caret"></span>
+                        <span class="badge check"><i class="fa fa-check avail"></i></span>Library Cafe <span class="caret"></span>
                         </a>
                     </h4>
                 </div>
@@ -141,13 +151,13 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-4">
-                                alksdjfs
+                                <a href="{% url 'home' %}" class="btn btn-default" role="button"><i class="fa fa-calendar fa-2x"></i></a>
                             </div>
                             <div class="col-xs-4">
-                                <a href="{% url 'home' %}" class="btn btn-default map-btn" role="button"><i class="fa fa-calendar fa-2x"></i></a>
+                                <a href="{% url 'computerlabs' %}" class="btn btn-default" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
                             </div>
                             <div class="col-xs-4">
-                                <a href="{% url 'computerlabs' %}" class="btn btn-default map-btn" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
+                                <a href="{% url 'home' %}" class="btn btn-default booknow" role="button">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -157,24 +167,21 @@
                 <div class="panel-heading" data-toggle="collapse" data-target="#collapseFive">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-target="#collapseFive" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                        <span class="badge"><i class="fa fa-times avail"></i></span>Library Cafe <span class="caret"></span>
+                        <span class="badge times"><i class="fa fa-times avail"></i></span>Appleton <span class="caret"></span>
                         </a>
                     </h4>
                 </div>
                 <div id="collapseFive" class="panel-collapse collapse" role="tabpanel">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-xs-4">
-                                <div class="free"></div>
-                                Free:<br>
-                                <div class="inuse"></div>
-                                In-Use:
+                             <div class="col-xs-4">
+                                <a href="{% url 'home' %}" class="btn btn-default" role="button"><i class="fa fa-calendar fa-2x"></i></a>
                             </div>
-                            <div class="col-xs-1">75<br>25</div>
                             <div class="col-xs-4">
-                                <div id="chartdiv5" style="width: 100%; height: 50px; background-color: #FFFFFF;" ></div>
+                                <a href="{% url 'computerlabs' %}" class="btn btn-default" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
                             </div>
-                            <div class="col-xs-2"> <a href="{% url 'computerlabs' %}" class="btn btn-default map-btn" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
+                            <div class="col-xs-4">
+                                <a href="{% url 'home' %}" class="btn btn-default disabled booknow" role="button">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -184,7 +191,7 @@
                 <div class="panel-heading" data-toggle="collapse" data-target="#collapseSix">
                     <h4 class="panel-title">
                         <a role="button" data-toggle="collapse" data-target="#collapseSix" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                        <span class="badge"><i class="fa fa-minus avail"></i></span>Library Cafe <span class="caret"></span>
+                        <span class="badge minus"><i class="fa fa-minus avail"></i></span>Hugh Robson <span class="caret"></span>
                         </a>
                     </h4>
                 </div>
@@ -192,16 +199,10 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-xs-4">
-                                <div class="free"></div>
-                                Free:<br>
-                                <div class="inuse"></div>
-                                In-Use:
+                                <a href="{% url 'home' %}" class="btn btn-default" role="button"><i class="fa fa-calendar fa-2x"></i></a>
                             </div>
-                            <div class="col-xs-1">75<br>25</div>
                             <div class="col-xs-4">
-                                <div id="chartdiv6" style="width: 100%; height: 50px; background-color: #FFFFFF;" ></div>
-                            </div>
-                            <div class="col-xs-2"> <a href="{% url 'computerlabs' %}" class="btn btn-default map-btn" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
+                                <a href="{% url 'computerlabs' %}" class="btn btn-default" role="button"><i class="fa fa-map-marker fa-2x"></i></a>
                             </div>
                         </div>
                     </div>

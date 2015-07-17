@@ -9,52 +9,35 @@
 <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/demostyles.css' %}">
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-{% endblock %}
-{% block content %}
 
 <style>
+    .modal-body {
+    padding-top: 0px;
+    }
     .btn-primary:hover {
     background-color: #337AB7;
     }
     .btn-xs {
     width: 70px;
-    height: 60px;
+    height: 50px;
     border-radius:0;
     }
     .btn-group > .btn:first-child {
     margin-left: -1px;
     }
-    .slide-glyph {
-    float: right;
-    margin-top: -8px;
+    .btn {
+    margin: 5px 0 5px 0;
     }
+
 </style>
 
-<p>Appleton Tower</p>
-<p>-Central Campus-</p>
+{% endblock %}
+{% block content %}
 
 {% endblock %}
 
 {% block outside %}
-
-<div class="panel-group" id="personal-info-accordion">
-    <div class="panel panel-default">
-        <!--START Panel -->
-        <div class="panel-heading">
-            <h3 class="panel-title"><span class="pull-right clickable panel-collapsed">
-                <a data-toggle="collapse" data-parent="#personal-info-accordion" href="#collapse-personal-info">
-                    <i class="fa fa-plus slide-glyph"></i>
-                </a>
-            </span></h3>
-
-        </div>
-        <div id="collapse-personal-info" class="panel-collapse collapse">
-            <!-- personal info panel body hidden by default - security by obscurity -->
-            <div class="panel-body">
-            </div>
-        </div>
-    </div>
-</div>
+<div class="container"> <p>Appleton Tower<br>-Central Campus-</p>
 
 <div class="container">
     <div class="swiper-container" id="box">
@@ -67,70 +50,10 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-xs-10">
-      <div id="navbar2" class="navbar-collapse collapse">
-    <p>Attributes <a><span class="caret"></span></a></p>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-microphone-slash fa-2x"></i>
-    </label><label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-desktop fa-2x"></i>
-    </label><label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off"> <i class="fa fa-map-marker fa-2x"></i>
-    </label>
-    <br>
-</div>
-
-<br> <br>
-
-<p>Campuses <a><span class="caret"></span></a></p>
-<div class="btn-group" data-toggle="buttons">
-    <label class="btn btn-primary btn-xs" >
-    <input type="checkbox" autocomplete="off">King's <br>Building
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Central
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Lauriston
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Holyrood
-    </label>
-    <label class="btn btn-primary btn-xs">
-    <input type="checkbox" autocomplete="off">Other
-    </label>
+<button type="button" class="btn btn-default"> <i class="fa fa-star"></i> Add to favourites</button>
 
 </div>
-          <br><br>
-          <button type="button" class="btn btn-default"> Filter
-    </button>
-          <br><br>
-  </div><!--/.nav-collapse -->
-        <div class="container">
-<button type="button" class="btn btn-default"> <i class="fa fa-star"></i> Add to favourites
-    </button>
-            </div>
-    </div>
 
-    <style>
-        #navbar2 {
-            margin-top: 0px;
-        }
-    </style>
-
-    <div class="col-xs-2">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar2">
-      <i class="fa fa-plus slide-glyph" ></i>
-
-    </button>
-
-</div>
-</div>
-
-
-
-
+{% include "modal-computers.html" %}
 
 {% endblock %}
