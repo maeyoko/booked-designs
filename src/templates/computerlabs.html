@@ -24,10 +24,39 @@
     .btn-group > .btn:first-child {
     margin-left: -1px;
     }
+    .slide-glyph {
+    float: right;
+    margin-top: -8px;
+    }
 </style>
 
 <p>Appleton Tower</p>
 <p>-Central Campus-</p>
+
+{% endblock %}
+
+{% block outside %}
+
+<div class="panel-group" id="personal-info-accordion">
+    <div class="panel panel-default">
+        <!--START Panel -->
+        <div class="panel-heading">
+            <h3 class="panel-title"><span class="pull-right clickable panel-collapsed">
+                <a data-toggle="collapse" data-parent="#personal-info-accordion" href="#collapse-personal-info">
+                    <i class="fa fa-plus slide-glyph"></i>
+                </a>
+            </span></h3>
+
+        </div>
+        <div id="collapse-personal-info" class="panel-collapse collapse">
+            <!-- personal info panel body hidden by default - security by obscurity -->
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
     <div class="swiper-container" id="box">
         <div class="swiper-wrapper" id="innerContent">
             <!--<div class="swiper-slide">Slide 1</div>-->
@@ -36,10 +65,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
-{% endblock %}
+</div>
 
-{% block outside %}
-<hr>
 <div class="row">
     <div class="col-xs-10">
       <div id="navbar2" class="navbar-collapse collapse">
@@ -95,12 +122,15 @@
 
     <div class="col-xs-2">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar2">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+      <i class="fa fa-plus slide-glyph" ></i>
+
     </button>
 
 </div>
 </div>
+
+
+
+
+
 {% endblock %}

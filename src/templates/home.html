@@ -6,17 +6,20 @@
     .btn-lg {
     border-radius: 0px;
     }
-    .btn-lg:first-child {
-    border-radius: 4px;
-    }
     .btn-block + .btn-block {
     margin-top: 0px;
     }
+    #first {
+    border-radius: 4px 4px 0 0;
+    }
+    #last {
+    border-radius: 0 0 4px 4px;
+    }
 </style>
 
-<a href="{% url 'computerlabs' %}" class="btn btn-info btn-lg btn-block" role="button"><i class="fa fa-laptop fa-3x"></i><br>Computer Labs</a>
-<a href="{% url 'tutorialrooms' %}" class="btn btn-success btn-lg btn-block" role="button"><i class="fa fa-home fa-3x"></i><br>Tutorial Rooms</a>
-<a href="{% url 'favourites' %}" class="btn btn-warning btn-lg btn-block" role="button"><i class="fa fa-star fa-3x"></i><br>Favourites</a>
-<a href="{% url 'history' %}" class="btn btn-primary btn-lg btn-block" role="button"><i class="fa fa-history fa-3x"></i><br>History</a>
+<a href="{% url 'computerlabs' %}" id="first" class="btn btn-info btn-lg btn-block" role="button"><i class="fa fa-laptop fa-3x"></i><div>Computer Lab</div></a>
+<a href="{% url 'tutorialrooms' %}" class="btn btn-success btn-lg btn-block" role="button"><i class="fa fa-home fa-3x"></i><div>Tutorial Rooms</div></a>
+<a href="{% url 'favourites' %}" class="btn btn-warning btn-lg btn-block" role="button"><i class="fa fa-star fa-3x"></i><div>Favourites</div></a>
+<a href="{% url 'history' %}" id="last" class="btn btn-primary btn-lg btn-block" role="button"><i class="fa fa-history fa-3x"></i><div>History</div></a>
 
 {% endblock %}
